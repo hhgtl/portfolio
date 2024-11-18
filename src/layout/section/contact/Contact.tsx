@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Container } from '../../../components/Container';
+import { theme } from '../../../styles/Theme';
 
 export const Contact = () => {
   return (
@@ -11,10 +13,23 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
-  height: 100vh;
+  margin-bottom: 200px;
   text-align: center;
 `;
 
-const Title = styled.h3``;
+const Title = styled.h3`
+  color: ${theme.color.primaryFont};
+  font-family: 'DM Sans';
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 70px;
+`;
 
-const Adress = styled.span``;
+const Adress = styled.h3`
+  font-family: 'DM Sans';
+  font-size: 58px;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, #13b0f5, #e70faa);
+  color: transparent;
+  -webkit-background-clip: text;
+`;

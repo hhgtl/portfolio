@@ -29,6 +29,10 @@ export const SocialLink = () => {
 
 const StyledSocialLink = styled.div`
   ul {
+    max-height: 30px;
     display: flex;
+    li + li {
+      margin-left: 20px;
+    }
   }
 `;

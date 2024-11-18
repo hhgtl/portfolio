@@ -1,32 +1,46 @@
 import styled from 'styled-components';
-import Icon from '../icon/Icon';
+import { theme } from '../../styles/Theme';
 
-export const Menu = () => {
+type MenuPropsType = {
+  width?: string;
+  fontWeight?: string;
+  fontSize?: string;
+};
+
+export const Menu = (props: MenuPropsType) => {
+  const listItems = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
+  const { width, fontWeight, fontSize } = props;
+  const styleProps = { width, fontWeight, fontSize };
   return (
-    <StyledMenu>
-      <ul>
-        <li>
-          <a href="">Home</a>
-        </li>
-        <li>
-          <a href="">About</a>
-        </li>
-        <li>
-          <a href="">Tech Stack</a>
-        </li>
-        <li>
-          <a href="">Projects</a>
-        </li>
-        <li>
-          <a href="">Contact</a>
-        </li>
-      </ul>
+    <StyledMenu {...styleProps}>
+      <ListItems>
+        {listItems.map((item, i) => (
+          <ListItem key={i}>
+            <ListLink {...styleProps}>{item}</ListLink>
+          </ListItem>
+        ))}
+      </ListItems>
     </StyledMenu>
   );
 };
 
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-  }
+const StyledMenu = styled.nav<MenuPropsType>`
+  min-width: ${(props) => props.width || '610px'};
+  align-content: center;
+`;
+
+const ListItems = styled.ul<MenuPropsType>`
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+`;
+
+const ListItem = styled.li``;
+
+const ListLink = styled.a<MenuPropsType>`
+  font-family: 'DM Sans';
+  font-size: ${(props) => props.fontSize || '20px'};
+  font-weight: ${(props) => props.fontWeight || 500};
+  color: ${theme.color.nav};
+  cursor: pointer;
 `;
