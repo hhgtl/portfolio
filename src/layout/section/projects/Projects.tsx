@@ -12,6 +12,15 @@ import project_6 from '../../../asests/img/project_6.png';
 import { Container } from '../../../components/Container';
 
 export const Projects = () => {
+  const imagesSrc = [
+    { src: project_1, alt: 'project_1' },
+    { src: project_2, alt: 'project_2' },
+    { src: project_3, alt: 'project_3' },
+    { src: project_4, alt: 'project_4' },
+    { src: project_5, alt: 'project_5' },
+    { src: project_6, alt: 'project_6' },
+  ];
+
   return (
     <StyledProjects>
       <Container>
@@ -21,12 +30,9 @@ export const Projects = () => {
           description="Things I’ve built so far"
         />
         <FlexWrapper wrap="wrap" justify="space-between" gap="65px 0">
-          <ProjectItem image={{ src: project_1, alt: 'project_1' }} />
-          <ProjectItem image={{ src: project_2, alt: 'project_1' }} />
-          <ProjectItem image={{ src: project_3, alt: 'project_1' }} />
-          <ProjectItem image={{ src: project_4, alt: 'project_1' }} />
-          <ProjectItem image={{ src: project_5, alt: 'project_1' }} />
-          <ProjectItem image={{ src: project_6, alt: 'project_1' }} />
+          {imagesSrc.map((srcObj, i) => (
+            <ProjectItem image={srcObj} key={i} />
+          ))}
         </FlexWrapper>
       </Container>
     </StyledProjects>

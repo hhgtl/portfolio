@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
+import { ListItem } from '../ListItems/ListItem/ListItem';
 
 type MenuPropsType = {
   width?: string;
@@ -34,8 +35,6 @@ const ListItems = styled.ul<MenuPropsType>`
   justify-content: space-between;
   margin-right: 50px;
 `;
-
-const ListItem = styled.li``;
 
 const ListLink = styled.a<MenuPropsType>`
   font-family: 'DM Sans';

@@ -5,15 +5,16 @@ import { SocialLink } from '../../components/socialLink/SocialLink';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import Icon from '../../components/icon/Icon';
+import { Link } from '../../components/Link/Link';
 
 export const Header = () => {
   return (
     <StyledHeader>
       <Container>
         <FlexWrapper justify="space-between" align="center">
-          <IconLink href="#">
+          <Link href="#">
             <Icon iconId="logoGradient" width="97px" height="60px" viewBox="0 0 97 60" />
-          </IconLink>
+          </Link>
           <FlexWrapper>
             <Menu />
             <SocialLink />
@@ -35,5 +36,3 @@ const StyledHeader = styled.header`
   padding-top: 20px;
   height: 100%;
 `;
-
-const IconLink = styled.a``;

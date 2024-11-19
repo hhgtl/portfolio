@@ -1,37 +1,39 @@
 import React from 'react';
 import Icon from '../icon/Icon';
-import { FlexWrapper } from '../FlexWrapper';
 import styled from 'styled-components';
+import { ListItem } from '../ListItems/ListItem/ListItem';
+import { Link } from '../Link/Link';
+import { ListItemsWrapper } from '../ListItems/ListItemsWrapper';
 
 export const SocialLink = () => {
   return (
     <StyledSocialLink>
-      <ul>
-        <li>
-          <a href="">
+      <ListItemsWrapper>
+        <ListItem>
+          <Link href="">
             <Icon iconId="githubGrey" width="30" height="30" viewBox="0 0 30 30" />
-          </a>
-        </li>
-        <li>
-          <a href="">
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="">
             <Icon iconId="twitter" width="32" height="32" viewBox="0 0 34 34" />
-          </a>
-        </li>
-        <li>
-          <a href="">
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="">
             <Icon iconId="linkedIn" width="30" height="30" viewBox="0 0 30 30" />
-          </a>
-        </li>
-      </ul>
+          </Link>
+        </ListItem>
+      </ListItemsWrapper>
     </StyledSocialLink>
   );
 };
 
 const StyledSocialLink = styled.div`
-  ul {
+  ${ListItemsWrapper} {
     max-height: 30px;
     display: flex;
-    li + li {
+    ${ListItem} + ${ListItem} {
       margin-left: 20px;
     }
   }

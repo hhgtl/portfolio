@@ -5,26 +5,19 @@ import { FlexWrapper } from '../../components/FlexWrapper';
 import { Container } from '../../components/Container';
 import { Menu } from '../../components/menu/Menu';
 import { theme } from '../../styles/Theme';
+import { Link } from '../../components/Link/Link';
+import { ContactItemsWrapper } from '../../components/ContactItemWrapper/ContactItemsWrapper';
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
         <MarginFlexWrapper justify="space-between">
-          <IconLink href="#">
+          <Link href="#">
             <Icon iconId="logo" width="97px" height="60px" viewBox="0 0 97 60" />
-          </IconLink>
+          </Link>
           <ContactWrapper>
-            <ContactItemWrapper>
-              <Contact>
-                <Icon iconId="faPhone" width="10" height="14" viewBox="0 0 10 14" />
-                <ContactText>+91 12345 09876</ContactText>
-              </Contact>
-              <Contact>
-                <Icon iconId="faPhone" width="10" height="14" viewBox="0 0 10 14" />
-                <ContactText>info@example.com</ContactText>
-              </Contact>
-            </ContactItemWrapper>
+            <ContactItemsWrapper />
             <SocialLink />
           </ContactWrapper>
         </MarginFlexWrapper>
@@ -57,31 +50,10 @@ const MarginFlexWrapper = styled(FlexWrapper)`
     background-color: #252632;
   }
 `;
-const ContactItemWrapper = styled.div`
-  display: flex;
-  margin-right: 78px;
-`;
-const Contact = styled.div`
-  height: 26px;
-  svg {
-    margin-right: 14px;
-    transform: translateY(5px);
-  }
-`;
 
 const ContactWrapper = styled.div`
   display: flex;
   align-items: center;
-  ${Contact} + ${Contact} {
-    margin-left: 32px;
-  }
-`;
-
-const ContactText = styled.span`
-  color: ${theme.color.nav};
-  font-family: 'DM Sans';
-  font-size: 18px;
-  font-weight: 400;
 `;
 
 const CreditsText = styled.small`
@@ -98,4 +70,3 @@ const GradientText = styled.span`
     color: ${theme.color.nav};
   }
 `;
-const IconLink = styled.a``;

@@ -6,6 +6,20 @@ import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 
 export const Skills = () => {
+  const iconsId = [
+    'html',
+    'css',
+    'javascript',
+    'react',
+    'redux',
+    'bootstrap',
+    'tailwind',
+    'sass',
+    'git',
+    'greensock',
+    'vscode',
+    'githubWhite',
+  ];
   return (
     <StyledSkills>
       <Container>
@@ -16,18 +30,9 @@ export const Skills = () => {
         />
 
         <FlexWrapper justify="center" wrap="wrap" gap="70px 84px">
-          <Icon iconId="html" />
-          <Icon iconId="css" />
-          <Icon iconId="javascript" />
-          <Icon iconId="react" />
-          <Icon iconId="redux" />
-          <Icon iconId="bootstrap" />
-          <Icon iconId="tailwind" />
-          <Icon iconId="sass" />
-          <Icon iconId="git" />
-          <Icon iconId="greensock" />
-          <Icon iconId="vscode" />
-          <Icon iconId="githubWhite" />
+          {iconsId.map((iconId, i) => (
+            <Icon iconId={iconId} key={i} />
+          ))}
         </FlexWrapper>
       </Container>
     </StyledSkills>
