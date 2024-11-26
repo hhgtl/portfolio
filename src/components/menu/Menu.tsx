@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
-import { ListItem } from '../ListItems/ListItem/ListItem';
 
 type MenuPropsType = {
   width?: string;
@@ -14,26 +13,22 @@ export const Menu = (props: MenuPropsType) => {
   const styleProps = { width, fontWeight, fontSize };
   return (
     <StyledMenu {...styleProps}>
-      <ListItems>
-        {listItems.map((item, i) => (
-          <ListItem key={i}>
-            <ListLink {...styleProps}>{item}</ListLink>
-          </ListItem>
-        ))}
-      </ListItems>
+      {listItems.map((item, i) => (
+        <ListLink key={i} {...styleProps} href="#">
+          {item}
+        </ListLink>
+      ))}
     </StyledMenu>
   );
 };
 
 const StyledMenu = styled.nav<MenuPropsType>`
-  min-width: ${(props) => props.width || '610px'};
-  align-content: center;
-`;
-
-const ListItems = styled.ul<MenuPropsType>`
   display: flex;
-  justify-content: space-between;
-  margin-right: 50px;
+  gap: 50px;
+  align-content: center;
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const ListLink = styled.a<MenuPropsType>`

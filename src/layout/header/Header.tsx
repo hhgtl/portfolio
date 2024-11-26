@@ -6,18 +6,22 @@ import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import Icon from '../../components/icon/Icon';
 import { Link } from '../../components/Link/Link';
+import { MobileMenu } from './MobileMenu';
 
 export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify="space-between" align="center">
+        <FlexWrapper justify="space-between" align="center" gap="50px">
           <Link href="#">
             <Icon iconId="logoGradient" width="97px" height="60px" viewBox="0 0 97 60" />
           </Link>
-          <FlexWrapper>
+          <FlexWrapper gap="50px">
             <Menu />
-            <SocialLink />
+            <MobileMenu />
+            <SocialLinkWrapper>
+              <SocialLink />
+            </SocialLinkWrapper>
           </FlexWrapper>
         </FlexWrapper>
       </Container>
@@ -35,4 +39,10 @@ const StyledHeader = styled.header`
   max-height: 100px;
   padding-top: 20px;
   height: 100%;
+`;
+
+const SocialLinkWrapper = styled.div`
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 `;

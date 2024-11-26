@@ -5,12 +5,13 @@ import styled from 'styled-components';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../styles/Theme';
 import photoDecore from '../../../asests/img/photoDecore.svg';
+import { font } from '../../../styles/Common';
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align="center" justify="space-between">
+        <FlexWrapper align="center" justify="space-around" wrap="wrap">
           <TitleTextWrapper>
             <TitleText>Hi 👋,</TitleText>
             <TitleText>My name is</TitleText>
@@ -30,6 +31,13 @@ const StyledMain = styled.section`
   height: 100vh;
   display: flex;
   margin-bottom: 10px;
+  overflow: hidden;
+  @media ${theme.media.tablet} {
+    margin-top: 60px;
+  }
+  @media ${theme.media.mobile} {
+    margin-top: 90px;
+  }
 `;
 
 const PhotoWrapper = styled.div`
@@ -37,12 +45,39 @@ const PhotoWrapper = styled.div`
   &::before {
     content: '';
     background-image: url(${photoDecore});
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 628px;
     height: 628px;
     position: absolute;
     top: -160px;
     left: -120px;
     z-index: -1;
+
+    @media screen and (max-width: 1540px) {
+      top: -160px;
+      left: -120px;
+    }
+    @media screen and (max-width: 1180px) {
+      width: 460px;
+      height: 460px;
+      top: -100px;
+      left: -80px;
+    }
+    @media ${theme.media.tablet} {
+      width: 628px;
+      height: 628px;
+      top: -160px;
+      left: -120px;
+    }
+    @media ${theme.media.mobile} {
+      top: -200px;
+      left: -140px;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    top: -100px;
   }
 `;
 
@@ -54,32 +89,55 @@ const Photo = styled.img`
   border-radius: 50%;
   background-clip: padding-box;
   padding: 10px;
+
+  @media screen and (max-width: 1180px) {
+    width: 280px;
+    height: 280px;
+    padding: 7px;
+  }
+  @media ${theme.media.tablet} {
+    width: 350px;
+    height: 350px;
+    padding: 9px;
+  }
+  @media ${theme.media.mobile} {
+    width: 280px;
+    height: 280px;
+    padding: 7px;
+  }
 `;
 
 const TitleTextWrapper = styled.div`
-  color: ${theme.color.titleFont};
-  font-size: 58px;
-  font-weight: 700;
-  line-height: 70px;
-  letter-spacing: -1px;
-  width: 636px;
-  height: 280px;
+  max-width: 636px;
+  max-height: 280px;
 `;
 
 const TitleText = styled.span`
+  /* ${font({ Fmax: 58, Fmin: 24, weight: 700 })} */
   color: ${theme.color.titleFont};
   font-size: 58px;
   font-weight: 700;
-  line-height: 70px;
   display: block;
+  @media screen and (max-width: 1180px) {
+    font-size: 40px;
+  }
+  @media ${theme.media.mobile} {
+    font-size: 28px;
+  }
 `;
 
 const Name = styled.span`
   font-size: 58px;
   font-weight: 700;
-  line-height: 70px;
-  background-image: linear-gradient(76deg, rgb(0, 192, 253), rgb(231, 15, 170));
   color: transparent;
+  /* ${font({ Fmax: 58, Fmin: 24, weight: 700, color: 'transparent' })} */
+  background-image: linear-gradient(76deg, rgb(0, 192, 253), rgb(231, 15, 170));
   -webkit-background-clip: text;
   display: block;
+  @media screen and (max-width: 1180px) {
+    font-size: 40px;
+  }
+  @media ${theme.media.mobile} {
+    font-size: 28px;
+  }
 `;
