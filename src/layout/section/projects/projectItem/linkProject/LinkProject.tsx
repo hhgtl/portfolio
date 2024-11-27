@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Icon from '../../../../../components/icon/Icon';
+import { theme } from '../../../../../styles/Theme';
+import { font } from '../../../../../styles/Common';
 
 type LinkProjectPropsType = {
   iconId: string;
@@ -33,4 +35,7 @@ const Link = styled.a`
   font-weight: 400;
   line-height: 26px;
   text-decoration: underline;
+  @media ${theme.media.mobile} {
+    ${font({ Fmax: 16, Fmin: 12, weight: 300, color: theme.color.primaryFont })}
+  }
 `;
