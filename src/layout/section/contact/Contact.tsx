@@ -2,12 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../styles/Theme';
+import { font } from '../../../styles/Common';
 
 export const Contact = () => {
   return (
     <StyledContact>
-      <Title>For any questions please mail me:</Title>
-      <Adress>hi@pavanmg.in</Adress>
+      <Container>
+        <Title>For any questions please mail me:</Title>
+        <Adress>hi@pavanmg.in</Adress>
+      </Container>
     </StyledContact>
   );
 };
@@ -18,18 +21,12 @@ const StyledContact = styled.section`
 `;
 
 const Title = styled.h3`
-  color: ${theme.color.primaryFont};
-  font-family: 'DM Sans';
-  font-size: 58px;
-  font-weight: 700;
   line-height: 70px;
+  ${font({ Fmax: 58, Fmin: 28, weight: 700, color: theme.color.primaryFont, family: 'DM Sans' })}
 `;
 
 const Adress = styled.h3`
-  font-family: 'DM Sans';
-  font-size: 58px;
-  font-weight: 700;
+  ${font({ Fmax: 58, Fmin: 28, weight: 700, color: 'transparent', family: 'DM Sans' })}
   background-image: linear-gradient(90deg, #13b0f5, #e70faa);
-  color: transparent;
   -webkit-background-clip: text;
 `;

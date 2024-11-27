@@ -38,6 +38,7 @@ export const Projects = () => {
 const StyledProjects = styled.section`
   margin-bottom: 180px;
   @media screen and (max-width: 800px) {
+    margin-bottom: 100px;
     ${FlexWrapper} {
       justify-content: center;
       row-gap: 35px;
