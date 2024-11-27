@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { theme } from '../styles/Theme';
 
 type SectionTitlePropsType = {
   title: string;
   description: string;
-  marginBottom: string;
+  marginBottom: number;
 };
 
 export const SectionTitle = (props: SectionTitlePropsType) => {
@@ -17,11 +18,14 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
 };
 
 type StyledSectionTitleProps = {
-  marginBottom: string;
+  marginBottom: number;
 };
 
 const StyledSectionTitle = styled.div<StyledSectionTitleProps>`
-  margin-bottom: ${(props) => props.marginBottom || 0};
+  margin-bottom: ${(props) => props.marginBottom + 'px' || 0};
+  @media ${theme.media.mobile} {
+    margin-bottom: ${(props) => props.marginBottom / 2 + 'px' || 0};
+  }
   h2 {
     margin-bottom: 50px;
     color: rgb(204, 204, 204);
@@ -31,6 +35,10 @@ const StyledSectionTitle = styled.div<StyledSectionTitleProps>`
     line-height: 26px;
     letter-spacing: 0px;
     text-align: center;
+    @media ${theme.media.mobile} {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
   }
   p {
     color: rgb(167, 167, 167);
@@ -40,5 +48,8 @@ const StyledSectionTitle = styled.div<StyledSectionTitleProps>`
     line-height: 26px;
     letter-spacing: 0px;
     text-align: center;
+    @media ${theme.media.mobile} {
+      font-size: 22px;
+    }
   }
 `;

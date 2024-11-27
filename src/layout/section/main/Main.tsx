@@ -71,8 +71,10 @@ const PhotoWrapper = styled.div`
       left: -120px;
     }
     @media ${theme.media.mobile} {
-      top: -200px;
-      left: -140px;
+      width: 460px;
+      height: 460px;
+      top: -100px;
+      left: -90px;
     }
   }
 
@@ -113,31 +115,38 @@ const TitleTextWrapper = styled.div`
 `;
 
 const TitleText = styled.span`
-  /* ${font({ Fmax: 58, Fmin: 24, weight: 700 })} */
   color: ${theme.color.titleFont};
   font-size: 58px;
   font-weight: 700;
   display: block;
-  @media screen and (max-width: 1180px) {
+  /* @media screen and (max-width: 1180px) {
     font-size: 40px;
   }
   @media ${theme.media.mobile} {
     font-size: 28px;
-  }
+  } */
+
+  ${font({ Fmax: 58, Fmin: 24, weight: 700 })}
 `;
 
 const Name = styled.span`
   font-size: 58px;
   font-weight: 700;
   color: transparent;
-  /* ${font({ Fmax: 58, Fmin: 24, weight: 700, color: 'transparent' })} */
   background-image: linear-gradient(76deg, rgb(0, 192, 253), rgb(231, 15, 170));
   -webkit-background-clip: text;
   display: block;
-  @media screen and (max-width: 1180px) {
+  /* @media screen and (max-width: 1180px) {
     font-size: 40px;
   }
   @media ${theme.media.mobile} {
     font-size: 28px;
-  }
+  } */
+
+  ${font({
+    Fmax: 58,
+    Fmin: 28,
+    weight: 700,
+    color: 'transparent',
+  })}
 `;

@@ -24,11 +24,7 @@ export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
-        <SectionTitle
-          marginBottom="110px"
-          title="Projects"
-          description="Things I’ve built so far"
-        />
+        <SectionTitle marginBottom={110} title="Projects" description="Things I’ve built so far" />
         <FlexWrapper wrap="wrap" justify="space-between" gap="65px 0">
           {imagesSrc.map((srcObj, i) => (
             <ProjectItem image={srcObj} key={i} />

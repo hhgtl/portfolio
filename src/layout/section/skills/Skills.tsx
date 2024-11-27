@@ -24,7 +24,7 @@ export const Skills = () => {
     <StyledSkills>
       <Container>
         <SectionTitle
-          marginBottom="100px"
+          marginBottom={100}
           title="My Tech Stack"
           description="Technologies I’ve been working with recently"
         />
