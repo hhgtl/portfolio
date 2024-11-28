@@ -16,7 +16,6 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
-  margin-bottom: 200px;
   text-align: center;
 `;
 

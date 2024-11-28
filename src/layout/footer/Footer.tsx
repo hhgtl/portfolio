@@ -12,7 +12,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <MarginFlexWrapper justify="space-between">
+        <MarginFlexWrapper justify="space-between" wrap="wrap" gap="12px">
           <Link href="#">
             <Icon iconId="logo" width="97px" height="60px" viewBox="0 0 97 60" />
           </Link>
@@ -21,8 +21,8 @@ export const Footer = () => {
             <SocialLink />
           </ContactWrapper>
         </MarginFlexWrapper>
-        <FlexWrapper justify="space-between" align="center" style={{ marginBottom: '60px' }}>
-          <Menu fontSize="18px" fontWeight="400" width="554px" />
+        <FlexWrapper justify="space-between" align="center">
+          <Menu fontSize="18px" fontWeight="400" width="554px" mediaMaxWidth="1100px" />
           <CreditsText>
             Designed and built by{' '}
             <GradientText>
@@ -35,7 +35,15 @@ export const Footer = () => {
   );
 };
 
-const StyledFooter = styled.section``;
+const StyledFooter = styled.section`
+  margin: 0;
+  ${FlexWrapper} {
+    margin-bottom: 60px;
+    @media ${theme.media.mobile} {
+      margin-bottom: 30px;
+    }
+  }
+`;
 
 const MarginFlexWrapper = styled(FlexWrapper)`
   margin-bottom: 94px;
@@ -48,18 +56,39 @@ const MarginFlexWrapper = styled(FlexWrapper)`
     left: 0;
     right: 0;
     background-color: #252632;
+    @media screen and (max-width: 495px) {
+      top: 140px;
+    }
+    @media screen and (max-width: 387px) {
+      top: 195px;
+    }
+  }
+  @media screen and (max-width: 496px) {
+    justify-content: center;
+    margin-bottom: 54px;
   }
 `;
 
 const ContactWrapper = styled.div`
   display: flex;
   align-items: center;
+  gap: 78px;
+  flex-wrap: wrap;
+  @media ${theme.media.mobile} {
+    gap: 24px;
+  }
+  @media screen and (max-width: 387px) {
+    justify-content: center;
+  }
 `;
 
 const CreditsText = styled.small`
   color: ${theme.color.nav};
   font-weight: 400px;
   font-size: 18px;
+  @media screen and (max-width: 1100px) {
+    margin: 0 auto;
+  }
 `;
 
 const GradientText = styled.span`

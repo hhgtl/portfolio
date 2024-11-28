@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../styles/Theme';
 import { useState } from 'react';
+import { SocialLink } from '../../components/socialLink/SocialLink';
 
 type MenuPropsType = {
   width?: string;

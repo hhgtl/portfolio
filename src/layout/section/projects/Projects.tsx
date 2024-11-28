@@ -25,7 +25,7 @@ export const Projects = () => {
     <StyledProjects>
       <Container>
         <SectionTitle marginBottom={110} title="Projects" description="Things I’ve built so far" />
-        <FlexWrapper wrap="wrap" justify="space-between" gap="65px 0">
+        <FlexWrapper wrap="wrap" justify="space-evenly" gap="65px 25px">
           {imagesSrc.map((srcObj, i) => (
             <ProjectItem image={srcObj} key={i} />
           ))}
@@ -36,9 +36,7 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  margin-bottom: 180px;
   @media screen and (max-width: 800px) {
-    margin-bottom: 100px;
     ${FlexWrapper} {
       justify-content: center;
       row-gap: 35px;

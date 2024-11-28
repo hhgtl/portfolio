@@ -1,16 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { theme } from '../../styles/Theme';
 
 type MenuPropsType = {
   width?: string;
   fontWeight?: string;
   fontSize?: string;
+  mediaMaxWidth?: string;
 };
 
 export const Menu = (props: MenuPropsType) => {
   const listItems = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
-  const { width, fontWeight, fontSize } = props;
-  const styleProps = { width, fontWeight, fontSize };
+  const { width, fontWeight, fontSize, mediaMaxWidth } = props;
+  const styleProps = { width, fontWeight, fontSize, mediaMaxWidth };
   return (
     <StyledMenu {...styleProps}>
       {listItems.map((item, i) => (
@@ -26,9 +27,18 @@ const StyledMenu = styled.nav<MenuPropsType>`
   display: flex;
   gap: 50px;
   align-content: center;
-  @media ${theme.media.tablet} {
-    display: none;
-  }
+  ${(props) =>
+    props.mediaMaxWidth
+      ? css<MenuPropsType>`
+          @media screen and (max-width: ${props.mediaMaxWidth}) {
+            display: none;
+          }
+        `
+      : css<MenuPropsType>`
+          @media ${theme.media.tablet} {
+            display: none;
+          }
+        `}
 `;
 
 const ListLink = styled.a<MenuPropsType>`

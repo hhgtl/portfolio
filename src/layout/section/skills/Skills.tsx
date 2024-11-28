@@ -4,6 +4,7 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import Icon from '../../../components/icon/Icon';
 import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { theme } from '../../../styles/Theme';
 
 export const Skills = () => {
   const iconsId = [
@@ -39,6 +40,4 @@ export const Skills = () => {
   );
 };
 
-const StyledSkills = styled.section`
-  margin-bottom: 215px;
-`;
+const StyledSkills = styled.section``;

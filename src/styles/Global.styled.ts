@@ -17,6 +17,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: ${theme.color.primariBg};
   line-height: 1.2;
+  min-width: 360px;
+}
+
+section {
+  margin-bottom: 180px;
+  @media ${theme.media.tablet} {
+    margin-bottom: 50px;
+  }
 }
 
 a {
