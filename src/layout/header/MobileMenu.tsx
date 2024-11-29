@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../styles/Theme';
 import { useState } from 'react';
-import { SocialLink } from '../../components/socialLink/SocialLink';
 
 type MenuPropsType = {
   width?: string;
@@ -9,7 +8,7 @@ type MenuPropsType = {
   fontSize?: string;
 };
 
-export const MobileMenu = (props: MenuPropsType) => {
+export const MobileMenu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
   const listItems = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
   const { width, fontWeight, fontSize } = props;
   const styleProps = { width, fontWeight, fontSize };

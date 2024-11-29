@@ -11,7 +11,7 @@ import project_5 from '../../../asests/img/project_5.png';
 import project_6 from '../../../asests/img/project_6.png';
 import { Container } from '../../../components/Container';
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   const imagesSrc = [
     { src: project_1, alt: 'project_1' },
     { src: project_2, alt: 'project_2' },

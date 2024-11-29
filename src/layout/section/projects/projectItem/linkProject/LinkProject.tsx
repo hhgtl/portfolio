@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import Icon from '../../../../../components/icon/Icon';
+import styled from 'styled-components';
 
 type LinkProjectPropsType = {
   iconId: string;
@@ -10,7 +10,7 @@ type LinkProjectPropsType = {
   viewBox?: string;
 };
 
-export const LinkProject = (props: LinkProjectPropsType) => {
+export const LinkProject: React.FC<LinkProjectPropsType> = (props: LinkProjectPropsType) => {
   return (
     <LinkProjectStyled>
       <Icon

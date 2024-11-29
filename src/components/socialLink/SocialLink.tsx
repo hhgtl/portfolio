@@ -1,10 +1,9 @@
 import React from 'react';
 import Icon from '../icon/Icon';
 import styled from 'styled-components';
-import { ListItem } from '../ListItems/ListItem/ListItem';
 import { Link } from '../Link/Link';
 
-export const SocialLink = () => {
+export const SocialLink: React.FC = () => {
   return (
     <StyledSocialLink>
       <ListItemsWrapper>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Contact } from './Contact/Contact';
 import { theme } from '../../styles/Theme';
 
-export const ContactItemsWrapper = () => {
+export const ContactItemsWrapper: React.FC = () => {
   return (
     <ContactItemsWrapperStyled>
       <Contact contactText="+91 12345 09876" />

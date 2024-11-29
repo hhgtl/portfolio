@@ -4,9 +4,8 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import Icon from '../../../components/icon/Icon';
 import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { theme } from '../../../styles/Theme';
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   const iconsId = [
     'html',
     'css',

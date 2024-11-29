@@ -7,7 +7,7 @@ type ContanctPropsType = {
   contactText: string;
 };
 
-export const Contact = (props: ContanctPropsType) => {
+export const Contact: React.FC<ContanctPropsType> = (props: ContanctPropsType) => {
   return (
     <ContactStyled>
       <Icon iconId="faPhone" width="10" height="14" viewBox="0 0 10 14" />
