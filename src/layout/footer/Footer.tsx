@@ -56,10 +56,13 @@ const MarginFlexWrapper = styled(FlexWrapper)`
     left: 0;
     right: 0;
     background-color: #252632;
-    @media screen and (max-width: 495px) {
+    @media screen and (max-width: 576px) {
+      top: 75px;
+    }
+    @media screen and (max-width: 478px) {
       top: 140px;
     }
-    @media screen and (max-width: 387px) {
+    @media screen and (max-width: 369px) {
       top: 195px;
     }
   }

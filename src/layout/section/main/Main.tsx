@@ -34,7 +34,7 @@ const StyledMain = styled.section`
   overflow: hidden;
   @media ${theme.media.tablet} {
     margin-top: 40px;
-    height: 110vh;
+    /* height: 110vh; */
   }
 `;
 
@@ -52,28 +52,15 @@ const PhotoWrapper = styled.div`
     left: -120px;
     z-index: -1;
 
-    @media screen and (max-width: 1540px) {
-      top: -160px;
-      left: -120px;
-    }
-    @media screen and (max-width: 1180px) {
-      width: 460px;
-      height: 460px;
-      top: -100px;
-      left: -80px;
-    }
-    @media ${theme.media.tablet} {
-      width: 460px;
-      height: 460px;
-      top: -100px;
-      left: -80px;
-    }
     @media ${theme.media.mobile} {
       width: 460px;
       height: 460px;
       top: -100px;
-      left: -90px;
+      left: -80px;
     }
+  }
+  @media screen and (max-width: 843px) {
+    top: -180px;
   }
 
   @media ${theme.media.tablet} {
@@ -90,18 +77,6 @@ const Photo = styled.img`
   background-clip: padding-box;
   padding: 10px;
 
-  @media screen and (max-width: 1180px) {
-    width: 280px;
-    height: 280px;
-    padding: 7px;
-  }
-  @media ${theme.media.tablet} {
-    /* width: 350px;
-    height: 350px; */
-    width: 280px;
-    height: 280px;
-    padding: 9px;
-  }
   @media ${theme.media.mobile} {
     width: 280px;
     height: 280px;
@@ -119,12 +94,6 @@ const TitleText = styled.span`
   font-size: 58px;
   font-weight: 700;
   display: block;
-  /* @media screen and (max-width: 1180px) {
-    font-size: 40px;
-  }
-  @media ${theme.media.mobile} {
-    font-size: 28px;
-  } */
 
   ${font({ Fmax: 58, Fmin: 24, weight: 700 })}
 `;
