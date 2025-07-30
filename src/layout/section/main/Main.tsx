@@ -4,16 +4,16 @@ import photo from '../../../asests/img/photo.png';
 import { Container } from '../../../components/Container';
 import { S } from './Main_Styled';
 
-export const Main: React.FC = () => {
+export const Main = () => {
   return (
     <S.Main>
       <Container>
         <FlexWrapper align="center" justify="space-around" wrap="wrap">
           <S.TitleTextWrapper>
-            <S.TitleText>Hi 👋,</S.TitleText>
-            <S.TitleText>My name is</S.TitleText>
-            <S.Name>Pavan MG</S.Name>
-            <S.TitleText>I build things for web</S.TitleText>
+            <S.TitleText>Привіт 👋,</S.TitleText>
+            <S.TitleText>Мене звати</S.TitleText>
+            <S.Name>Петро</S.Name>
+            <S.TitleText>Я веб-розробник</S.TitleText>
           </S.TitleTextWrapper>
           <S.PhotoWrapper>
             <S.Photo src={photo} alt="My photo" />

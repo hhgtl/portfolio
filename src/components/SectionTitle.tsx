@@ -8,7 +8,7 @@ type SectionTitlePropsType = {
   marginBottom: number;
 };
 
-export const SectionTitle: React.FC<SectionTitlePropsType> = (props: SectionTitlePropsType) => {
+export const SectionTitle = (props: SectionTitlePropsType) => {
   return (
     <StyledSectionTitle marginBottom={props.marginBottom}>
       <h2>{props.title}</h2>

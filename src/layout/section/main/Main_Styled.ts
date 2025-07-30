@@ -35,12 +35,17 @@ const PhotoWrapper = styled.div`
     }
   }
   @media screen and (max-width: 843px) {
-    top: -180px;
+    top: -100px;
   }
 
   @media ${theme.media.tablet} {
     top: -60px;
   }
+
+  @media ${theme.media.mobile} {
+    top: -120px;
+  }
+  
 `;
 
 const Photo = styled.img`

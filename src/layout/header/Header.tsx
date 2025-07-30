@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Menu } from '../../components/menu/Menu';
 import { SocialLink } from '../../components/socialLink/SocialLink';
 import { Container } from '../../components/Container';
@@ -8,13 +8,14 @@ import { Link } from '../../components/Link/Link';
 import { MobileMenu } from './MobileMenu';
 import { S } from './Header_Styled';
 
-export const Header: React.FC = () => {
-  const [width, setWidth] = React.useState(window.innerWidth);
+export const Header = () => {
+  const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 768;
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleWindowResize);
+
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
   return (

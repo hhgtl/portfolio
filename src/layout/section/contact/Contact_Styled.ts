@@ -8,7 +8,7 @@ const Contact = styled.section`
 
 const Title = styled.h3`
   line-height: 70px;
-  ${font({ Fmax: 58, Fmin: 28, weight: 700, color: theme.color.primaryFont, family: 'DM Sans' })}
+  ${font({ Fmax: 50, Fmin: 28, weight: 700, color: theme.color.primaryFont, family: 'DM Sans' })}
 `;
 
 const Adress = styled.h3`

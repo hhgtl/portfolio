@@ -2,12 +2,12 @@ import React from 'react';
 import { Container } from '../../../components/Container';
 import { S } from './Contact_Styled';
 
-export const Contact: React.FC = () => {
+export const Contact = () => {
   return (
     <S.Contact>
       <Container>
-        <S.Title>For any questions please mail me:</S.Title>
-        <S.Adress>hi@pavanmg.in</S.Adress>
+        <S.Title>З будь-яких питань, будь ласка, пишіть мені:</S.Title>
+        <S.Adress>petrosahal66@gmail.com</S.Adress>
       </Container>
     </S.Contact>
   );

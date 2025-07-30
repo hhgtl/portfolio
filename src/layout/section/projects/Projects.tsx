@@ -11,7 +11,7 @@ import project_5 from '../../../asests/img/project_5.png';
 import project_6 from '../../../asests/img/project_6.png';
 import { Container } from '../../../components/Container';
 
-export const Projects: React.FC = () => {
+export const Projects = () => {
   const imagesSrc = [
     { src: project_1, alt: 'project_1' },
     { src: project_2, alt: 'project_2' },
@@ -24,7 +24,7 @@ export const Projects: React.FC = () => {
   return (
     <StyledProjects>
       <Container>
-        <SectionTitle marginBottom={110} title="Projects" description="Things I’ve built so far" />
+        <SectionTitle marginBottom={110} title="Projects" description="" />
         <FlexWrapper wrap="wrap" justify="space-evenly" gap="65px 25px">
           {imagesSrc.map((srcObj, i) => (
             <ProjectItem image={srcObj} key={i} />

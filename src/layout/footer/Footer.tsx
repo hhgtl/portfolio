@@ -6,13 +6,13 @@ import { Menu } from '../../components/menu/Menu';
 import { S } from './Footer_Styled';
 import { Link } from '../../components/Link/Link';
 import { ContactItemsWrapper } from '../../components/ContactItemWrapper/ContactItemsWrapper';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-export const Footer: React.FC = () => {
-  const [width, setWidth] = React.useState(window.innerWidth);
+export const Footer= () => {
+  const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 1100;
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleWindowResize);
     return () => window.removeEventListener('resize', handleWindowResize);

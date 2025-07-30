@@ -6,8 +6,8 @@ import { theme } from '../../styles/Theme';
 export const ContactItemsWrapper: React.FC = () => {
   return (
     <ContactItemsWrapperStyled>
-      <Contact contactText="+91 12345 09876" />
-      <Contact contactText="info@example.com" />
+      <Contact contactText="380 631 066 920" />
+      <Contact contactText="petrosahal66@gmail.com" />
     </ContactItemsWrapperStyled>
   );
 };
