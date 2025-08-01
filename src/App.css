@@ -1,1 +1,5 @@
+.ParticlesWrapper {
+    position: fixed;
+    z-index: -1;
 
+}
