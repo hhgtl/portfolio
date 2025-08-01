@@ -22,7 +22,7 @@ export const Projects = () => {
   ];
 
   return (
-    <StyledProjects>
+    <StyledProjects id={'projects'}>
       <Container>
         <SectionTitle marginBottom={110} title="Projects" description="" />
         <FlexWrapper wrap="wrap" justify="space-evenly" gap="65px 25px">

@@ -8,7 +8,7 @@ type MenuPropsType = {
   fontSize?: string;
 };
 
-export const MobileMenu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
+export const MobileMenu = (props: MenuPropsType) => {
   const listItems = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
   const { width, fontWeight, fontSize } = props;
   const styleProps = { width, fontWeight, fontSize };

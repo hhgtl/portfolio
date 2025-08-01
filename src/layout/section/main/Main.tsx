@@ -6,7 +6,7 @@ import { S } from './Main_Styled';
 
 export const Main = () => {
   return (
-    <S.Main>
+    <S.Main id="home">
       <Container>
         <FlexWrapper align="center" justify="space-around" wrap="wrap">
           <S.TitleTextWrapper>

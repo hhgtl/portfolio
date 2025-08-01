@@ -8,15 +8,15 @@ type MenuPropsType = {
   fontSize?: string;
 };
 
-export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
-  const listItems = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
+export const Menu = (props: MenuPropsType) => {
+  const listItems = [{value: 'Home', id: 'home'}, {value: 'Tech Stack', id: 'tech'}, {value: 'Projects', id: 'projects'}, {value: 'Contact', id: 'contact'}];
   const { width, fontWeight, fontSize } = props;
   const styleProps = { width, fontWeight, fontSize };
   return (
     <StyledMenu {...styleProps}>
       {listItems.map((item, i) => (
-        <ListLink key={i} {...styleProps} href="#">
-          {item}
+        <ListLink key={i} {...styleProps} href={`#${item.id}`}>
+          {item.value}
         </ListLink>
       ))}
     </StyledMenu>

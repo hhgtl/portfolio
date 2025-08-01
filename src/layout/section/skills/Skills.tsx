@@ -26,7 +26,7 @@ export const Skills = () => {
   ];
 
   return (
-    <StyledSkills>
+    <StyledSkills id={'tech'}>
       <Container>
         <SectionTitle
           marginBottom={100}
