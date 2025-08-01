@@ -22,8 +22,8 @@ export const Header = () => {
     <S.Header>
       <Container>
         <FlexWrapper justify="space-between" align="center" gap="50px">
-          <Link href="#">
-            <Icon iconId="logoGradient" width="97px" height="60px" viewBox="0 0 97 60" />
+          <Link href="#home">
+            <Icon iconId="logo" width="300px" height="60px" viewBox="0 0 97 60" />
           </Link>
           <FlexWrapper gap="50px">
             {width <= breakpoint ? <MobileMenu /> : <Menu />}
