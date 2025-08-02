@@ -4,6 +4,7 @@ import { FlexWrapper } from '../../components/FlexWrapper';
 
 const Footer = styled.section`
   margin: 0;
+
   ${FlexWrapper} {
     margin-bottom: 60px;
     @media ${theme.media.mobile} {
@@ -13,6 +14,7 @@ const Footer = styled.section`
 `;
 
 const MarginFlexWrapper = styled(FlexWrapper)`
+  
   margin-bottom: 94px;
   position: relative;
   &::after {
@@ -40,6 +42,7 @@ const MarginFlexWrapper = styled(FlexWrapper)`
 `;
 
 const ContactWrapper = styled.div`
+  
   display: flex;
   align-items: center;
   gap: 78px;
@@ -54,7 +57,7 @@ const ContactWrapper = styled.div`
 
 const CreditsText = styled.small`
   color: ${theme.color.nav};
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 18px;
   @media screen and (max-width: 1100px) {
     margin: 0 auto;

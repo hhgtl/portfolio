@@ -5,21 +5,23 @@ import { ContactText } from '../../ContactText/ContactText';
 
 type ContanctPropsType = {
   contactText: string;
+  iconId: string;
 };
 
-export const Contact: React.FC<ContanctPropsType> = (props: ContanctPropsType) => {
+export const Contact = (props: ContanctPropsType) => {
   return (
     <ContactStyled>
-      <Icon iconId="faPhone" width="10" height="14" viewBox="0 0 10 14" />
+      <Icon iconId={props.iconId} width="36" height="36" viewBox="0 0 36 36" />
       <ContactText>{props.contactText}</ContactText>
     </ContactStyled>
   );
 };
 
 const ContactStyled = styled.div`
-  height: 26px;
+    display: flex;
+    align-items: center;
+  height: 36px;
   svg {
-    margin-right: 14px;
-    transform: translateY(5px);
+    margin-right: 10px;
   }
 `;

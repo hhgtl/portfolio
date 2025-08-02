@@ -23,6 +23,7 @@ export const Skills = () => {
     { iconId: 'vscode',       value: 'VS Code' },
     { iconId: 'webStorm',     value: 'WebStorm' },
     { iconId: 'githubWhite',  value: 'GitHub' },
+    { iconId: 'jira',  value: 'Jira' },
   ];
 
   return (
