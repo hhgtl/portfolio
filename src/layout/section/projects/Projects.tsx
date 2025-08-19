@@ -3,22 +3,28 @@ import styled from 'styled-components';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { ProjectItem } from './projectItem/ProjectItem';
-import project_1 from '../../../asests/img/project_1.png';
-import project_2 from '../../../asests/img/project_2.png';
-import project_3 from '../../../asests/img/project_3.png';
-import project_4 from '../../../asests/img/project_4.png';
-import project_5 from '../../../asests/img/project_5.png';
-import project_6 from '../../../asests/img/project_6.png';
+import todolist from '../../../asests/img/projects/todo-list.png';
+import CounterWithRedux from '../../../asests/img/projects/counter-with-redux.png';
+import MyPin from '../../../asests/img/projects/my-pin.png';
 import { Container } from '../../../components/Container';
 
+export type ProjectType = {
+    title: string
+    desc: string
+    tech: string
+    image: {
+        src: string
+        alt: string
+    }
+    previewLink: string
+    codeLink: string
+}
+
 export const Projects = () => {
-  const imagesSrc = [
-    { src: project_1, alt: 'project_1' },
-    { src: project_2, alt: 'project_2' },
-    { src: project_3, alt: 'project_3' },
-    { src: project_4, alt: 'project_4' },
-    { src: project_5, alt: 'project_5' },
-    { src: project_6, alt: 'project_6' },
+  const projects: ProjectType[] = [
+    { title: "Task tracker", desc: "Task Tracker - веб-застосунок для ефективного управління завданнями. Користувачі можуть створювати, редагувати та відстежувати задачі, змінювати їхні статуси та пріоритети. Реалізована повноцінна авторизація через логін і пароль, що дозволяє персоналізувати робочий простір.", tech: 'HTML, CSS, JavaScript, TypeScript, React, Redux toolkit, Material UI, React Hook Form, Zod', image: {src: todolist, alt: 'todolist image'}, previewLink: 'https://hhgtl.github.io/todo-list/', codeLink: 'https://github.com/hhgtl/todo-list' },
+    { title: "Counter with redux", tech: 'HTML, CSS, JavaScript, TypeScript, React, Redux toolkit', desc: "Counter with Redux - лічильник, який дозволяє встановлювати мінімальне та максимальне значення. Користувачі можуть збільшувати або зменшувати число, але кнопки автоматично блокуються, якщо значення досягло встановлених меж. Стан застосунку керується через Redux Toolkit, демонструючи роботу з глобальним станом у React.", image: {src: CounterWithRedux, alt: 'CounterWithRedux image'}, previewLink: 'https://hhgtl.github.io/counter-with-redux/', codeLink: 'https://github.com/hhgtl/counter-with-redux' },
+    { title: "MY PIN", desc: "My PIN - веб-застосунок на кшталт Pinterest для організації та перегляду зображень. Користувачі можуть переглядати картинки, натискаючи на них для перегляду заголовку та опису, фільтрувати за тегами, створювати дошки та зберігати у них зображення. Реалізована можливість завантаження фотографій, обрізки під формат, накладення фільтрів, а також додавання заголовку, опису та тегів для кожної картинки.", tech: 'HTML, CSS, JavaScript, TypeScript, React, Redux toolkit, React Router Dom', image: {src: MyPin, alt: 'MyPin image'}, previewLink: 'https://hhgtl.github.io/photo-gallery/', codeLink: 'https://github.com/hhgtl/photo-gallery' },
   ];
 
   return (
@@ -26,8 +32,8 @@ export const Projects = () => {
       <Container>
         <SectionTitle marginBottom={110} title="Projects" description="" />
         <FlexWrapper wrap="wrap" justify="space-evenly" gap="65px 25px">
-          {imagesSrc.map((srcObj, i) => (
-            <ProjectItem image={srcObj} key={i} />
+          {projects.map((project, i) => (
+            <ProjectItem project={project} key={i} />
           ))}
         </FlexWrapper>
       </Container>

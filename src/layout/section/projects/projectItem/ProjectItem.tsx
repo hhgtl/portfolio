@@ -1,27 +1,23 @@
 import React from 'react';
 import { LinkProject } from './linkProject/LinkProject';
 import { S } from './ProjectItem_Styled';
+import {ProjectType} from "../Projects";
 
-type ImageType = {
-  src: string;
-  alt: string;
+type Props = {
+    project: ProjectType;
 };
 
-type ProjectItemPropsType = {
-  image: ImageType;
-};
-
-export const ProjectItem = (props: ProjectItemPropsType) => {
+export const ProjectItem = ({project}: Props) => {
+    const { image, previewLink, codeLink, title, tech, desc } = project
   return (
     <S.ProjectItem>
-      <S.Image src={props.image.src} alt={props.image.alt} />
-      <S.Title>Project Tile goes here</S.Title>
+      <S.Image src={image.src} alt={image.alt} />
+      <S.Title>{title}</S.Title>
       <S.Description>
-        This is sample project description random things are here in description This is sample
-        project lorem ipsum generator for dummy content
+          {desc}
       </S.Description>
       <S.TechStack>
-        <span>Tech stack :</span> HTML , JavaScript, SASS, React
+        <span>Tech stack :</span> {tech}
       </S.TechStack>
       <S.LinkWrapper>
         <LinkProject
@@ -30,8 +26,9 @@ export const ProjectItem = (props: ProjectItemPropsType) => {
           height="20"
           viewBox="0 0 20 20"
           linkText="Live Preview"
+          link={previewLink}
         />
-        <LinkProject iconId="githubWhite" width="32" height="32" linkText="View Code" />
+        <LinkProject link={codeLink} iconId="githubWhite" width="32" height="32" linkText="View Code" />
       </S.LinkWrapper>
     </S.ProjectItem>
   );

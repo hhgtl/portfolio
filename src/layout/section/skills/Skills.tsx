@@ -15,6 +15,7 @@ export const Skills = () => {
     { iconId: 'react',        value: 'React' },
     { iconId: 'nextJs',       value: 'NextJs' },
     { iconId: 'redux',        value: 'Redux Toolkit' },
+    { iconId: 'reactRouterDom',  value: 'React Router Dom' },
     { iconId: 'materialUi',   value: 'Material‑UI' },
     { iconId: 'sass',         value: 'Sass' },
     { iconId: 'hookForm',     value: 'React Hook Form' },

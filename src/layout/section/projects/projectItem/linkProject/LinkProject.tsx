@@ -8,9 +8,11 @@ type LinkProjectPropsType = {
   height: string;
   linkText: string;
   viewBox?: string;
+  link: string
+
 };
 
-export const LinkProject: React.FC<LinkProjectPropsType> = (props: LinkProjectPropsType) => {
+export const LinkProject = (props: LinkProjectPropsType) => {
   return (
     <LinkProjectStyled>
       <Icon
@@ -19,7 +21,7 @@ export const LinkProject: React.FC<LinkProjectPropsType> = (props: LinkProjectPr
         height={props.height}
         viewBox={props.viewBox}
       />
-      <Link href="#">{props.linkText}</Link>
+      <Link target={'_blank'} href={props.link}>{props.linkText}</Link>
     </LinkProjectStyled>
   );
 };

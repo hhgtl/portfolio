@@ -44,9 +44,8 @@ const Title = styled.h3`
 const Description = styled.p`
   padding: 8px;
   color: ${theme.color.primaryFont};
-  font-family: Poppins;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 26px;
   text-align: center;
   margin-bottom: 12px;
@@ -56,6 +55,7 @@ const Description = styled.p`
 `;
 
 const TechStack = styled.p`
+  padding: 0 8px;
   text-align: center;
   margin-bottom: 20px;
   color: ${theme.color.primaryFont};
@@ -84,11 +84,6 @@ const LinkWrapper = styled.div`
     align-items: center;
     svg {
       margin-right: 4px;
-    }
-  }
-  div + div svg {
-    use {
-      y: 18;
     }
   }
 `;
