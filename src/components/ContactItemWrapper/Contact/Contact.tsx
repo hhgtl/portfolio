@@ -20,8 +20,8 @@ export const Contact = (props: ContanctPropsType) => {
 const ContactStyled = styled.div`
     display: flex;
     align-items: center;
-  height: 36px;
-  svg {
-    margin-right: 10px;
-  }
+    height: 36px;
+    svg {
+        margin-right: 10px;
+    }
 `;
