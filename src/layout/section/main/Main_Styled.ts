@@ -65,7 +65,7 @@ const Photo = styled.img`
 `;
 
 const TitleTextWrapper = styled.div`
-  max-width: 636px;
+  max-width: 836px;
   max-height: 280px;
 `;
 
